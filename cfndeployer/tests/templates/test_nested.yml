@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: VPC Test Template
+
+Resources:
+  VPC:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: test_template.yml
+      Parameters:
+        VpcName: "nested-test-vpc"
+        VpcCIDR: "10.0.0.0/24"
