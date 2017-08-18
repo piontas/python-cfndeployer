@@ -193,7 +193,7 @@ class Package:
 
         self.s3_uploader = S3Uploader(
             client, bucket, self.kwargs.get('Region', 'eu-west-1'),
-            self.kwargs.get('StackName', 'cfn'), None, True)
+            self.kwargs.get('StackName', 'cfn'), self.kwargs.get('KMSKey'), True)
 
     def package(self, use_json=False):
         """
